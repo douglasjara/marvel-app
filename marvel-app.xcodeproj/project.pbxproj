@@ -29,6 +29,9 @@
 		CF675E6926550100007B950C /* SeriesSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF675E6826550100007B950C /* SeriesSummary.swift */; };
 		CF675E6B2655D4A2007B950C /* CharacterDataWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF675E6A2655D4A2007B950C /* CharacterDataWrapper.swift */; };
 		CF675E6D2655D4B0007B950C /* CharacterDataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF675E6C2655D4B0007B950C /* CharacterDataContainer.swift */; };
+		CF675E6F2655D7B2007B950C /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF675E6E2655D7B2007B950C /* APIManager.swift */; };
+		CF675E722655DA90007B950C /* CharactersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF675E712655DA90007B950C /* CharactersService.swift */; };
+		CF675E7426567F06007B950C /* MarvelServiceSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF675E7326567F06007B950C /* MarvelServiceSettings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +80,10 @@
 		CF675E6826550100007B950C /* SeriesSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeriesSummary.swift; sourceTree = "<group>"; };
 		CF675E6A2655D4A2007B950C /* CharacterDataWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDataWrapper.swift; sourceTree = "<group>"; };
 		CF675E6C2655D4B0007B950C /* CharacterDataContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDataContainer.swift; sourceTree = "<group>"; };
+		CF675E6E2655D7B2007B950C /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		CF675E712655DA90007B950C /* CharactersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersService.swift; sourceTree = "<group>"; };
+		CF675E7326567F06007B950C /* MarvelServiceSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelServiceSettings.swift; sourceTree = "<group>"; };
+		CF675E76265682D5007B950C /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +145,7 @@
 				CF675E2726548275007B950C /* LaunchScreen.storyboard */,
 				CF675E2A26548275007B950C /* Info.plist */,
 				CF675E2226548274007B950C /* marvel_app.xcdatamodeld */,
+				CF675E76265682D5007B950C /* Config.xcconfig */,
 			);
 			path = "marvel-app";
 			sourceTree = "<group>";
@@ -164,16 +172,18 @@
 			isa = PBXGroup;
 			children = (
 				CF675E5326548EF3007B950C /* Entities */,
-				CF675E4D26548AA3007B950C /* Services */,
+				CF675E4D26548AA3007B950C /* Managers */,
+				CF675E702655DA61007B950C /* Services */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		CF675E4D26548AA3007B950C /* Services */ = {
+		CF675E4D26548AA3007B950C /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				CF675E6E2655D7B2007B950C /* APIManager.swift */,
 			);
-			path = Services;
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		CF675E4E26548AB4007B950C /* ViewModels */ = {
@@ -208,6 +218,15 @@
 				CF675E6826550100007B950C /* SeriesSummary.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		CF675E702655DA61007B950C /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CF675E7326567F06007B950C /* MarvelServiceSettings.swift */,
+				CF675E712655DA90007B950C /* CharactersService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -356,6 +375,9 @@
 				CF675E1C26548274007B950C /* SceneDelegate.swift in Sources */,
 				CF675E6B2655D4A2007B950C /* CharacterDataWrapper.swift in Sources */,
 				CF675E6926550100007B950C /* SeriesSummary.swift in Sources */,
+				CF675E722655DA90007B950C /* CharactersService.swift in Sources */,
+				CF675E6F2655D7B2007B950C /* APIManager.swift in Sources */,
+				CF675E7426567F06007B950C /* MarvelServiceSettings.swift in Sources */,
 				CF675E5F265500BE007B950C /* StoryList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,6 +435,7 @@
 /* Begin XCBuildConfiguration section */
 		CF675E4126548276007B950C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF675E76265682D5007B950C /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -474,6 +497,7 @@
 		};
 		CF675E4226548276007B950C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CF675E76265682D5007B950C /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
