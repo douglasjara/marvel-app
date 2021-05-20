@@ -37,7 +37,7 @@ class CharactersService
     private func getMarvelUrl() -> String
     {
         let ts = Date().timeIntervalSince1970 * 1_000_000
-        let toHash = "\(ts)\(MarvelServiceSettings.privateKey)\(MarvelServiceSettings.publicKey)"
+        let toHash = "\(ts)\(MarvelServiceSettings.privateKey ?? "")\(MarvelServiceSettings.publicKey)"
         return MarvelServiceSettings.serviceUrl+"?ts=\(ts)&apikey=\(MarvelServiceSettings.publicKey)&hash=\(MD5(string: toHash))"
     }
     

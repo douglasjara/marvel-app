@@ -32,6 +32,8 @@
 		CF675E6F2655D7B2007B950C /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF675E6E2655D7B2007B950C /* APIManager.swift */; };
 		CF675E722655DA90007B950C /* CharactersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF675E712655DA90007B950C /* CharactersService.swift */; };
 		CF675E7426567F06007B950C /* MarvelServiceSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF675E7326567F06007B950C /* MarvelServiceSettings.swift */; };
+		CF675E7826568E47007B950C /* CharactersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF675E7726568E47007B950C /* CharactersViewModel.swift */; };
+		CF675E7A2656A5AF007B950C /* CharacterDataWrapperViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF675E792656A5AF007B950C /* CharacterDataWrapperViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +86,8 @@
 		CF675E712655DA90007B950C /* CharactersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersService.swift; sourceTree = "<group>"; };
 		CF675E7326567F06007B950C /* MarvelServiceSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelServiceSettings.swift; sourceTree = "<group>"; };
 		CF675E76265682D5007B950C /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		CF675E7726568E47007B950C /* CharactersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewModel.swift; sourceTree = "<group>"; };
+		CF675E792656A5AF007B950C /* CharacterDataWrapperViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDataWrapperViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,12 +138,12 @@
 		CF675E1826548274007B950C /* marvel-app */ = {
 			isa = PBXGroup;
 			children = (
-				CF675E5026548AD0007B950C /* Controllers */,
+				CF675E5026548AD0007B950C /* Views */,
 				CF675E4E26548AB4007B950C /* ViewModels */,
 				CF675E4C26548A9B007B950C /* Models */,
 				CF675E1926548274007B950C /* AppDelegate.swift */,
-				CF675E1B26548274007B950C /* SceneDelegate.swift */,
 				CF675E1D26548274007B950C /* ViewController.swift */,
+				CF675E1B26548274007B950C /* SceneDelegate.swift */,
 				CF675E1F26548274007B950C /* Main.storyboard */,
 				CF675E2526548275007B950C /* Assets.xcassets */,
 				CF675E2726548275007B950C /* LaunchScreen.storyboard */,
@@ -189,15 +193,17 @@
 		CF675E4E26548AB4007B950C /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				CF675E7726568E47007B950C /* CharactersViewModel.swift */,
+				CF675E792656A5AF007B950C /* CharacterDataWrapperViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		CF675E5026548AD0007B950C /* Controllers */ = {
+		CF675E5026548AD0007B950C /* Views */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Controllers;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		CF675E5326548EF3007B950C /* Entities */ = {
@@ -365,6 +371,7 @@
 				CF675E67265500F3007B950C /* SeriesList.swift in Sources */,
 				CF675E5B265500A3007B950C /* ComicList.swift in Sources */,
 				CF675E5726550053007B950C /* Url.swift in Sources */,
+				CF675E7A2656A5AF007B950C /* CharacterDataWrapperViewModel.swift in Sources */,
 				CF675E1A26548274007B950C /* AppDelegate.swift in Sources */,
 				CF675E5526548F06007B950C /* Character.swift in Sources */,
 				CF675E2426548274007B950C /* marvel_app.xcdatamodeld in Sources */,
@@ -374,6 +381,7 @@
 				CF675E65265500E7007B950C /* EventSummary.swift in Sources */,
 				CF675E1C26548274007B950C /* SceneDelegate.swift in Sources */,
 				CF675E6B2655D4A2007B950C /* CharacterDataWrapper.swift in Sources */,
+				CF675E7826568E47007B950C /* CharactersViewModel.swift in Sources */,
 				CF675E6926550100007B950C /* SeriesSummary.swift in Sources */,
 				CF675E722655DA90007B950C /* CharactersService.swift in Sources */,
 				CF675E6F2655D7B2007B950C /* APIManager.swift in Sources */,
