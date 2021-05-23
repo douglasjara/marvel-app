@@ -7,11 +7,11 @@
 
 struct CharacterDataWrapper: Codable
 {
-    var code: Int
-    var status: String
-    var copyright: String
-    var attributionText: String
-    var attributionHTML: String
-    var data: CharacterDataContainer
-    var etag: String
+    var code: Int?
+    var status: String?
+    var copyright: String?
+    var attributionText: String?
+    var attributionHTML: String?
+    var data: CharacterDataContainer?
+    var etag: String?
 }

@@ -10,6 +10,8 @@ import Foundation
 struct MarvelServiceSettings
 {
     static let publicKey = "7dd6b1c293a76e31114fe7a3734e446d"
-    static let privateKey = Bundle.main.infoDictionary?["API_KEY"] as? String
+    static let privateKey = Bundle.main.infoDictionary?["API_KEY"] as! String
     static let serviceUrl = "https://gateway.marvel.com:443/v1/public/characters"
+    static let defaultLimit = 10
+    static let defaultOffset = 0
 }

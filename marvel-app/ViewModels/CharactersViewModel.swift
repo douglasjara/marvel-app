@@ -7,6 +7,9 @@
 
 class CharactersViewModel: CharactersServiceDelegate
 {
+    private(set) var characterViewModels: [CharacterViewModel] = []
+    private(set) var totalCharacters: Int = 0
+    private var offset: Int = 0
     private let charactersService: CharactersService
     weak var delegate: CharactersViewModelDelegate?
     
@@ -20,16 +23,44 @@ class CharactersViewModel: CharactersServiceDelegate
     {
         charactersService.refreshData()
     }
+    
+    public func loadMoreData()
+    {
+        offset = offset + MarvelServiceSettings.defaultLimit
+        charactersService.getData(limit: MarvelServiceSettings.defaultLimit, offset: offset)
+    }
+    
+    private func updateCharacterViewModels(append: Bool = false)
+    {
+        if let totalCharacters = charactersService.characterDataWrapper.data?.total {
+            self.totalCharacters = totalCharacters
+        }
+        
+        var viewModels: [CharacterViewModel] = []
+        
+        if let characters = charactersService.characterDataWrapper.data?.results {
+            for character in characters {
+                viewModels.append(CharacterViewModel(character: character))
+            }
+        }
+        
+        if append {
+            characterViewModels.append(contentsOf: viewModels)
+        } else {
+            characterViewModels = viewModels
+        }
+        
+        delegate?.charactersViewModelDidUpdateCharacters(self)
+    }
        
     // MARK: - CharactersServiceDelegate
-    func charactersServiceDelegateDidUpdate(_: CharactersService, didSetCharacters characters: CharacterDataWrapper)
+    func charactersServiceDelegateDidUpdate(_: CharactersService, append: Bool)
     {
-        let characterDataWrapperViewModel = CharacterDataWrapperViewModel(characterDataWrapper: characters)
-        delegate?.charactersViewModelDidUpdateCharacters(self, characterDataWrapperViewModel: characterDataWrapperViewModel)
+        updateCharacterViewModels(append: append)
     }
 }
 
 protocol CharactersViewModelDelegate: AnyObject
 {
-    func charactersViewModelDidUpdateCharacters(_: CharactersViewModel, characterDataWrapperViewModel: CharacterDataWrapperViewModel)
+    func charactersViewModelDidUpdateCharacters(_: CharactersViewModel)
 }
