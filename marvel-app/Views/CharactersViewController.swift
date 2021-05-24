@@ -36,13 +36,26 @@ class CharactersViewController: UIViewController, UITableViewDelegate, UITableVi
         super.viewDidLoad()
         view.backgroundColor = .black
         view.addSubview(tableView)
-        setupTableView()
         
-        title = "Marvel"
+        setupNavigationBar()
+        self.title = "Marvel"
         
         tableView.delegate = self
         tableView.dataSource = self
         charactersViewModel.delegate = self
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        setupTableView()
+    }
+    
+    private func setupNavigationBar() {
+        self.navigationController!.navigationBar.barStyle = .black
+        self.navigationController!.navigationBar.isTranslucent = false
+        self.navigationController!.navigationBar.prefersLargeTitles = true
+        self.navigationController!.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        self.navigationController!.navigationBar.tintColor = #colorLiteral(red: 1, green: 0.99997437, blue: 0.9999912977, alpha: 1)
     }
     
     private func setupTableView() {

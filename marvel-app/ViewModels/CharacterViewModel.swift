@@ -23,10 +23,12 @@ class CharacterViewModel
             return self.character.description!
         }
     }
+    var imageUrl: String { get { return "\(self.character.thumbnail!.path).\(self.character.thumbnail!.ext)" } }
+    
     var modified: String { get { return self.character.modified! } }
     var resourceURI: String { get { return self.character.resourceURI! } }
     var urls: [Url] { get { return self.character.urls! } }
-    var imageUrl: String { get { return "\(self.character.thumbnail!.path).\(self.character.thumbnail!.ext)" } }
+    
     var comics: ComicList { get { return self.character.comics! } }
     var stories: StoryList { get { return self.character.stories! } }
     var events: EventList { get { return self.character.events! } }
