@@ -10,7 +10,6 @@
 		CF675E1A26548274007B950C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF675E1926548274007B950C /* AppDelegate.swift */; };
 		CF675E1C26548274007B950C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF675E1B26548274007B950C /* SceneDelegate.swift */; };
 		CF675E1E26548274007B950C /* CharactersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF675E1D26548274007B950C /* CharactersViewController.swift */; };
-		CF675E2126548274007B950C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF675E1F26548274007B950C /* Main.storyboard */; };
 		CF675E2426548274007B950C /* marvel_app.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CF675E2226548274007B950C /* marvel_app.xcdatamodeld */; };
 		CF675E2626548275007B950C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF675E2526548275007B950C /* Assets.xcassets */; };
 		CF675E2926548275007B950C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF675E2726548275007B950C /* LaunchScreen.storyboard */; };
@@ -36,6 +35,9 @@
 		CF675E7C2656F90E007B950C /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF675E7B2656F90E007B950C /* CharacterCell.swift */; };
 		CF675E7E265700AF007B950C /* CharacterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF675E7D265700AF007B950C /* CharacterViewModel.swift */; };
 		CF675E8126572227007B950C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF675E8026572227007B950C /* Extensions.swift */; };
+		CF997365283E19C200A320D6 /* CharactersView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF997364283E19C200A320D6 /* CharactersView.xib */; };
+		CF997367283E210B00A320D6 /* CharacterCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF997366283E210B00A320D6 /* CharacterCellView.xib */; };
+		CF997369283E41DA00A320D6 /* CharacterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF997368283E41DA00A320D6 /* CharacterView.xib */; };
 		CFE0C9BB2659C3C700688251 /* CharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFE0C9BA2659C3C700688251 /* CharacterViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,7 +63,6 @@
 		CF675E1926548274007B950C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CF675E1B26548274007B950C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		CF675E1D26548274007B950C /* CharactersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersViewController.swift; sourceTree = "<group>"; };
-		CF675E2026548274007B950C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CF675E2326548274007B950C /* marvel_app.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = marvel_app.xcdatamodel; sourceTree = "<group>"; };
 		CF675E2526548275007B950C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF675E2826548275007B950C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -93,6 +94,9 @@
 		CF675E7B2656F90E007B950C /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
 		CF675E7D265700AF007B950C /* CharacterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewModel.swift; sourceTree = "<group>"; };
 		CF675E8026572227007B950C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		CF997364283E19C200A320D6 /* CharactersView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharactersView.xib; sourceTree = "<group>"; };
+		CF997366283E210B00A320D6 /* CharacterCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterCellView.xib; sourceTree = "<group>"; };
+		CF997368283E41DA00A320D6 /* CharacterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterView.xib; sourceTree = "<group>"; };
 		CFE0C9BA2659C3C700688251 /* CharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,12 +148,12 @@
 		CF675E1826548274007B950C /* marvel-app */ = {
 			isa = PBXGroup;
 			children = (
+				CF997363283E197E00A320D6 /* Controllers */,
 				CF675E5026548AD0007B950C /* Views */,
 				CF675E4E26548AB4007B950C /* ViewModels */,
 				CF675E4C26548A9B007B950C /* Models */,
 				CF675E1926548274007B950C /* AppDelegate.swift */,
 				CF675E1B26548274007B950C /* SceneDelegate.swift */,
-				CF675E1F26548274007B950C /* Main.storyboard */,
 				CF675E2526548275007B950C /* Assets.xcassets */,
 				CF675E2726548275007B950C /* LaunchScreen.storyboard */,
 				CF675E2A26548275007B950C /* Info.plist */,
@@ -207,10 +211,9 @@
 		CF675E5026548AD0007B950C /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				CF675E1D26548274007B950C /* CharactersViewController.swift */,
-				CF675E7B2656F90E007B950C /* CharacterCell.swift */,
-				CFE0C9BA2659C3C700688251 /* CharacterViewController.swift */,
-				CF675E7F2657220C007B950C /* Helpers */,
+				CF997364283E19C200A320D6 /* CharactersView.xib */,
+				CF997366283E210B00A320D6 /* CharacterCellView.xib */,
+				CF997368283E41DA00A320D6 /* CharacterView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -250,6 +253,17 @@
 				CF675E8026572227007B950C /* Extensions.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		CF997363283E197E00A320D6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CF675E1D26548274007B950C /* CharactersViewController.swift */,
+				CF675E7B2656F90E007B950C /* CharacterCell.swift */,
+				CFE0C9BA2659C3C700688251 /* CharacterViewController.swift */,
+				CF675E7F2657220C007B950C /* Helpers */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -356,8 +370,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF675E2926548275007B950C /* LaunchScreen.storyboard in Resources */,
+				CF997369283E41DA00A320D6 /* CharacterView.xib in Resources */,
 				CF675E2626548275007B950C /* Assets.xcassets in Resources */,
-				CF675E2126548274007B950C /* Main.storyboard in Resources */,
+				CF997367283E210B00A320D6 /* CharacterCellView.xib in Resources */,
+				CF997365283E19C200A320D6 /* CharactersView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,14 +458,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CF675E1F26548274007B950C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CF675E2026548274007B950C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CF675E2726548275007B950C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
