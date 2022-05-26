@@ -10,7 +10,7 @@ import CryptoKit
 
 class CharactersService
 {
-    private(set) var characterDataWrapper = CharacterDataWrapper()
+    internal var characterDataWrapper = CharacterDataWrapper()
     weak var delegate: CharactersServiceDelegate?
     private let fileURL: URL
     private let fileManager = FileManager.default
