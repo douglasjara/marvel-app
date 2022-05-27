@@ -9,22 +9,13 @@ import UIKit
 
 class CharactersViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CharactersViewModelDelegate
 {
-    let tableView: UITableView = {
-        let tableView = UITableView()
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        tableView.backgroundColor = .black
-        tableView.isScrollEnabled = true
-        tableView.showsVerticalScrollIndicator = true
-        tableView.alwaysBounceVertical = true
-        tableView.register(CharacterCell.self, forCellReuseIdentifier: CharacterCell.identifier)
-        return tableView
-    }()
-    
     private var charactersViewModel: CharactersViewModel
 
+    @IBOutlet weak var tableView: UITableView!
+        
     init(charactersViewModel: CharactersViewModel) {
         self.charactersViewModel = charactersViewModel
-        super.init(nibName: nil, bundle: nil)
+        super.init(nibName: "CharactersView", bundle: nil)
     }
     
     required convenience init?(coder: NSCoder)
@@ -34,7 +25,9 @@ class CharactersViewController: UIViewController, UITableViewDelegate, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .black
+        let nib = UINib(nibName: "CharacterCellView", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: CharacterCell.identifier)
+        
         view.addSubview(tableView)
         
         setupNavigationBar()
@@ -44,12 +37,7 @@ class CharactersViewController: UIViewController, UITableViewDelegate, UITableVi
         tableView.dataSource = self
         charactersViewModel.delegate = self
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        setupTableView()
-    }
-    
+       
     private func setupNavigationBar() {
         self.navigationController!.navigationBar.barStyle = .black
         self.navigationController!.navigationBar.isTranslucent = false
@@ -57,14 +45,7 @@ class CharactersViewController: UIViewController, UITableViewDelegate, UITableVi
         self.navigationController!.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         self.navigationController!.navigationBar.tintColor = #colorLiteral(red: 1, green: 0.99997437, blue: 0.9999912977, alpha: 1)
     }
-    
-    private func setupTableView() {
-        tableView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        tableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
-        tableView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
-        tableView.heightAnchor.constraint(equalTo: view.heightAnchor).isActive = true
-    }
-    
+       
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 200
     }

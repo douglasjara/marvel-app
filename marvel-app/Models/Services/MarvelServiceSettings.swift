@@ -14,4 +14,5 @@ struct MarvelServiceSettings
     static let serviceUrl = "https://gateway.marvel.com:443/v1/public/characters"
     static let defaultLimit = 10
     static let defaultOffset = 0
+    static let getOnlineData = true
 }

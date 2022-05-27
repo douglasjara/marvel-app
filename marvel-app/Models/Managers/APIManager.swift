@@ -5,7 +5,7 @@
 //  Created by Douglas Jara Negrete on 20/5/21.
 //
 
-import UIKit
+import Foundation
 
 class APIManager
 {
